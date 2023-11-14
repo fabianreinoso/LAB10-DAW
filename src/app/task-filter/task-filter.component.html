@@ -1,0 +1,46 @@
+<style>
+    .container {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#filterSelect {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Estilos adicionales si lo necesitas */
+.row {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="filterSelect">Filtrar:</label>
+          <select id="filterSelect" [(ngModel)]="filterCompleted" (change)="toggleFilter()" class="form-control">
+            <option value="all">Todas</option>
+            <option value="notCompleted">No Completadas</option>
+            <option value="completed">Completadas</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  

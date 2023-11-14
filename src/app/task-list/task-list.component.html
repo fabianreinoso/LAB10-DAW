@@ -1,0 +1,49 @@
+<style>
+.container {
+  margin-top: 20px;
+}
+
+.list-group {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 12px;
+}
+
+.task-checkbox {
+  margin-right: 8px;
+}
+
+.task-name {
+  flex-grow: 1;
+}
+
+/* Estilos adicionales si lo necesitas */
+.row {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+</style>
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li *ngFor="let task of filteredTasks()" class="list-group-item">
+          <input type="checkbox" [(ngModel)]="task.completed" class="mr-2"> {{ task.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
